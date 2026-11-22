@@ -746,7 +746,7 @@
                 {
                   "id": "f9c77d28-e3c6-42a6-9248-9cb36728ddc9",
                   "title": "New STRIDE threat",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Critical",
                   "type": "Elevation of privilege",
                   "description": "An agent exploits a flaw in P2’s authorization checks to perform an action reserved for a customer or a higher privileged role",
@@ -763,7 +763,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 1,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 2
               }
             },
             "tools": {
