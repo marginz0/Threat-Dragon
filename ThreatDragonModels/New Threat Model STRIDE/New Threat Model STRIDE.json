@@ -117,8 +117,8 @@
                 "text": "E1 Customer"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -215,9 +215,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b75612de-04e8-4c2b-80c6-2b694a33a367",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker obtains customer's credentials and takes control of phone",
+                  "mitigation": "P1 should verify credentials and require 2FA for sensitive actions",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -595,8 +613,8 @@
                 "text": "P2 Process wallet Transactions"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -693,12 +711,67 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "1658049b-dc50-4b48-b32e-9b989544107c",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "An attacker who compromises P2 or alters the data in transit could change the transaction amount or destination, or manipulate the balances",
+                  "mitigation": "Validate transaction details before committing them",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "428115f1-a967-45ca-ae56-53b57d3dba65",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "An attacker floods P2 with repeated transaction requests overwhelming it",
+                  "mitigation": "Apply per account and per source rate limiting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "f9c77d28-e3c6-42a6-9248-9cb36728ddc9",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "An agent exploits a flaw in P2’s authorization checks to perform an action reserved for a customer or a higher privileged role",
+                  "mitigation": "Enforce role- and account-based authorization in P2 for every transaction, using trusted permissions from D1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -832,11 +905,13 @@
                 "text": "D2 Wallet and Transaction Records"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -933,13 +1008,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "ef19e885-03af-4d48-8365-6d1601e74a64",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "A customer or an agent denying a transaction that is recorded in D2 wallet",
+                  "mitigation": "Having isolated audits with comprehensive data such as timestamps, amount and type of transaction\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "9e958d15-86a2-40a4-977a-c14312aa6163",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Obtaining customer financial data as it flows from D2 to P2",
+                  "mitigation": "Enforcing permissions and returning info only authenticated agent and customer can view",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1967,6 +2075,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Marginz0",
-    "threatTop": 0
+    "threatTop": 7
   }
 }
