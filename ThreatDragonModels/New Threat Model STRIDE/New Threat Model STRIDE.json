@@ -22,11 +22,11 @@
           {
             "position": {
               "x": 360,
-              "y": 119.99999999999994
+              "y": 110
             },
             "size": {
               "width": 680,
-              "height": 360
+              "height": 370
             },
             "attrs": {
               "label": {
