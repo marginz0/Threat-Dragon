@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "c4db7c3e-27cd-4bc3-9dc5-28e1668578e8",
             "zIndex": -1,
+            "id": "c4db7c3e-27cd-4bc3-9dc5-28e1668578e8",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "TB1 PesaPoa System Boundary",
@@ -80,8 +80,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "23d2b0f4-76fb-46c8-90ca-f71464fa38de",
             "zIndex": -1,
+            "id": "23d2b0f4-76fb-46c8-90ca-f71464fa38de",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "TB2 Data store",
@@ -124,6 +124,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -207,7 +208,6 @@
               ]
             },
             "id": "282598d4-f553-4572-a1b3-cc3d713591ab",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "E1 Customer",
@@ -241,6 +241,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -324,7 +325,6 @@
               ]
             },
             "id": "d804c0cb-298b-4955-b8ef-2d624477be95",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": " E2 Agent",
@@ -358,6 +358,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -441,7 +442,6 @@
               ]
             },
             "id": "987d5513-bd11-4579-a518-4f4699a1cd01",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "P1 Authenticate",
@@ -481,6 +481,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -564,7 +565,6 @@
               ]
             },
             "id": "4acbd0f8-0f60-4d9d-b832-61fdae9df51e",
-            "zIndex": 4,
             "data": {
               "type": "tm.Store",
               "name": "D1 Customer & Agent Accounts",
@@ -602,6 +602,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -685,7 +686,6 @@
               ]
             },
             "id": "6a353375-3448-4350-8113-e3d2ecb4223b",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "P2 Process wallet Transactions",
@@ -722,6 +722,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -805,7 +806,6 @@
               ]
             },
             "id": "f7c5efef-5ee7-44e8-9ebc-8885c0ba101f",
-            "zIndex": 6,
             "data": {
               "type": "tm.Actor",
               "name": "E3 SMS provider",
@@ -842,6 +842,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -925,7 +926,6 @@
               ]
             },
             "id": "65b3ffd9-3a9a-41cf-95ad-7402cfdcbf29",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "D2 Wallet and Transaction Records",
@@ -1833,8 +1833,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "03976478-256c-4d6c-bc40-f634658c12b5",
             "zIndex": 11,
+            "id": "03976478-256c-4d6c-bc40-f634658c12b5",
             "data": {
               "type": "tm.Text",
               "name": "PesaPoa Threat model",
@@ -1862,6 +1862,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1945,7 +1946,6 @@
               ]
             },
             "id": "d2999886-a696-44ad-9687-8f489d682f2f",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Authorize Transaction",
