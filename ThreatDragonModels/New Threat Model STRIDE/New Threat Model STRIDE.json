@@ -21,16 +21,16 @@
         "cells": [
           {
             "position": {
-              "x": 370,
-              "y": 120
+              "x": 360,
+              "y": 119.99999999999994
             },
             "size": {
-              "width": 670,
+              "width": 680,
               "height": 360
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "TB1 PesaPoa System Boundary"
               }
             },
             "visible": true,
@@ -39,7 +39,7 @@
             "zIndex": -1,
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "TB1 PesaPoa System Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -64,16 +64,16 @@
           },
           {
             "position": {
-              "x": 526,
-              "y": 319.00000000000034
+              "x": 486,
+              "y": 319.0000000000003
             },
             "size": {
-              "width": 490,
+              "width": 530,
               "height": 140
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "TB2 Data store"
               }
             },
             "visible": true,
@@ -82,7 +82,7 @@
             "zIndex": -1,
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "TB2 Data store",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -110,7 +110,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Customer"
+                "text": "E1 Customer"
               },
               "body": {
                 "stroke": "#333333",
@@ -206,7 +206,7 @@
             "zIndex": 1,
             "data": {
               "type": "tm.Actor",
-              "name": "Customer",
+              "name": "E1 Customer",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -227,7 +227,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Agent"
+                "text": " E2 Agent"
               },
               "body": {
                 "stroke": "#333333",
@@ -323,7 +323,7 @@
             "zIndex": 2,
             "data": {
               "type": "tm.Actor",
-              "name": "Agent",
+              "name": " E2 Agent",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -344,7 +344,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Authenticate"
+                "text": "P1 Authenticate"
               },
               "body": {
                 "stroke": "#333333",
@@ -440,7 +440,7 @@
             "zIndex": 3,
             "data": {
               "type": "tm.Process",
-              "name": "Authenticate",
+              "name": "P1 Authenticate",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -464,7 +464,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Customer & Agent Accounts"
+                "text": "D1 Customer & Agent Accounts"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -563,7 +563,7 @@
             "zIndex": 4,
             "data": {
               "type": "tm.Store",
-              "name": "Customer & Agent Accounts",
+              "name": "D1 Customer & Agent Accounts",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -588,7 +588,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Process wallet Transactions"
+                "text": "P2 Process wallet Transactions"
               },
               "body": {
                 "stroke": "#333333",
@@ -684,7 +684,7 @@
             "zIndex": 5,
             "data": {
               "type": "tm.Process",
-              "name": "Process wallet Transactions",
+              "name": "P2 Process wallet Transactions",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -708,7 +708,7 @@
             },
             "attrs": {
               "text": {
-                "text": "SMS provider"
+                "text": "E3 SMS provider"
               },
               "body": {
                 "stroke": "#333333",
@@ -804,7 +804,7 @@
             "zIndex": 6,
             "data": {
               "type": "tm.Actor",
-              "name": "SMS provider",
+              "name": "E3 SMS provider",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -825,7 +825,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Wallet and Transaction Records"
+                "text": "D2 Wallet and Transaction Records"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -924,7 +924,7 @@
             "zIndex": 7,
             "data": {
               "type": "tm.Store",
-              "name": "Wallet and Transaction Records",
+              "name": "D2 Wallet and Transaction Records",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1760,7 +1760,7 @@
               "y": -90
             },
             "size": {
-              "width": 112.5,
+              "width": 150,
               "height": 60
             },
             "attrs": {
@@ -1776,13 +1776,6 @@
               "type": "tm.Text",
               "name": "PesaPoa Threat model",
               "hasOpenThreats": false
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ],
